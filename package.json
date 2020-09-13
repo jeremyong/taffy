@@ -1,5 +1,5 @@
 {
-  "name": "taffy",
+  "name": "tuppy",
   "version": "1.0.0",
   "description": "No-fuss, batteries included static-site blog engine for mathematicians, scientists, and programmers.",
   "main": "src/index.js",
@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeremyong/taffy.git"
+    "url": "git+https://github.com/jeremyong/tuppy.git"
   },
   "bugs": {
-    "url": "https://github.com/jeremyong/taffee/issues"
+    "url": "https://github.com/jeremyong/tuppy/issues"
   },
-  "homepage": "https://github.com/jeremyong/taffee",
+  "homepage": "https://github.com/jeremyong/tuppy",
   "keywords": [
     "blog",
     "latex",

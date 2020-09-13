@@ -1,13 +1,13 @@
-# Taffy 🍬
+# Tuppy 🍲
 
 ## NOTE: CURRENTLY UNDER ACTIVE DEVELOPMENT
 
-Taffy is a no-fuss, batteries included static-site blog engine. It is designed
+Tuppy is a no-fuss, batteries included static-site blog engine. It is designed
 to deploy easily on [GitHub Pages](https://pages.github.com/) and is built on
-top of Markdown and LaTeX. Taffy is geared toward bloggers with a math, science,
+top of Markdown and LaTeX. Tuppy is geared toward bloggers with a math, science,
 and tech bent, but all usage is encouraged.
 
-Here are some of the batteries Taffy includes:
+Here are some of the batteries Tuppy includes:
 
 1. LaTeX support for inline math (single $ signs) and display math (surrounded
    with $$).
@@ -18,7 +18,7 @@ Here are some of the batteries Taffy includes:
 
 ## Usage
 
-Taffy is written in [TypeScript](https://www.typescriptlang.org/) and distributed
+Tuppy is written in [TypeScript](https://www.typescriptlang.org/) and distributed
 via NPM. To start a new blog, execute the following commands:
 
 ```bash
