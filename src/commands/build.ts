@@ -21,23 +21,30 @@ const md = Markdown({
     highlight: function (str: string, lang: string) {
         if (lang && hljs.getLanguage(lang)) {
             try {
-                return hljs.highlight(lang, str).value;
-            } catch (_) { }
+                const body = hljs.highlight(lang, str, true).value;
+                return `<pre class="hljs"><code>${body}</code></pre>`;
+            } catch (err) {
+                console.error(err);
+            }
         }
 
         return callout(lang, str);
     }
 });
+
+// Various markdown extensions
 const mk = require('@iktakahiro/markdown-it-katex');
 const footnote = require('markdown-it-footnote');
 const emoji = require('markdown-it-emoji');
 const admon = require('markdown-it-admonition');
+const anchor = require('markdown-it-anchor');
 md.use(admon, {
     classes: ['mui-panel', 'admonition'],
     titleTransform: (title: string) => title.charAt(0).toLocaleUpperCase() + title.slice(1),
 });
 md.use(footnote);
 md.use(emoji);
+md.use(anchor);
 
 const raw_md = Markdown({ html: true });
 

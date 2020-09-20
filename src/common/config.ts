@@ -24,6 +24,10 @@ export default async function () {
                 const hash = crypto.createHash('md5').update(config.gravatar_email.trim().toLowerCase()).digest('hex');
                 config.avatar = `https://www.gravatar.com/avatar/${hash}`;
             }
+
+            if (!config.highlight_theme) {
+                config.highlight_theme = 'github';
+            }
         }
         catch (error) {
             console.error(`Unable to load config.json5 file: ${error}`);

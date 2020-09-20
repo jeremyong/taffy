@@ -6,7 +6,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel="stylesheet" type="test/css">
     <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.0/build/styles/default.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.0/build/styles/{{config.highlight_theme}}.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
         integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
@@ -61,7 +61,7 @@
         <div class="post-author">
             {{#config.avatar}}
             <div class="avatar">
-                <img src="{{{config.avatar}}}" />
+                <img alt="author-avatar" src="{{{config.avatar}}}" />
             </div>
             {{/config.avatar}}
             <div class="author">

@@ -59,9 +59,10 @@ TODO: Document LaTeX usage, admonitions, images, etc
 - [ ] Invoke KaTeX on the post descriptions to enable LaTeX usage in descriptions
 - [ ] Injectable JS
 - [ ] Integrate plotting library
-- [ ] Integrate markdown anchors extensions to support inter-post linking
 - [ ] Provide header/footer templates and enable customization
 - [ ] Social media links/icons
+- [ ] Improve home page (post listings)
+- [ ] Add pagination support
 
 ### Live previewer
 
