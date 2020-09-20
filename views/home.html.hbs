@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang={{config.lang}}>
+
+<head>
+    <title>{{config.name}}</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel="stylesheet" type="test/css">
+    <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.0/build/styles/default.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+        integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{config.rel_path}}/main.css">
+    <meta property="og:title" content="{{post.title}}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{config.url}}/{{post.uri}}">
+    <meta property="og:site_name" content="{{config.name}}">
+    {{#config.description}}
+    <meta name="description" content="{{post.description}}">
+    <meta property="og:description" content="{{post.description}}">
+    {{/config.description}}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="content" class="mui-container">
+        <div class="blog-title">
+            <div class="blog-name">
+                <h1>
+                    {{config.name}}
+                </h1>
+            </div>
+            {{#config.description}}
+            <div class="blog-description">
+                <h2>
+                    {{config.description}}
+                </h2>
+            </div>
+            {{/config.description}}
+            <div class="blog post-author">
+                {{#config.avatar}}
+                <div class="avatar">
+                    <img src="{{{config.avatar}}}" />
+                </div>
+                {{/config.avatar}}
+                <div class="author">
+                    {{config.author}}
+                </div>
+            </div>
+        </div>
+        {{#posts}}
+        <div class="post-summary">
+            <div class="post-summary-date">
+                {{long_date}}
+            </div>
+            <div class="post-summary-title">
+                <a href="{{uri}}">{{title}}</a>
+            </div>
+            {{#subtitle}}
+            <div class="post-summary-subtitle">
+                {{{subtitle}}}
+            </div>
+            {{/subtitle}}
+        </div>
+        {{/posts}}
+    </div>
+</body>
+
+</html>

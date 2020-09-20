@@ -2,9 +2,10 @@
   "name": "tuppy",
   "version": "1.0.0",
   "description": "No-fuss, batteries included static-site blog engine for mathematicians, scientists, and programmers.",
-  "main": "src/index.js",
+  "main": "dist/cli.js",
   "scripts": {
     "build": "tsc",
+    "watch": "tsc -w",
     "test": "jest",
     "prepare": "npm run build"
   },
@@ -28,18 +29,34 @@
   "license": "MIT",
   "devDependencies": {
     "@tsconfig/node12": "^1.0.7",
+    "@types/highlight.js": "^9.12.4",
+    "@types/json5": "0.0.30",
+    "@types/markdown-it": "^10.0.2",
+    "@types/mustache": "^4.0.1",
+    "@types/serve-handler": "^6.1.0",
+    "@types/yargs": "^15.0.5",
     "jest": "^26.4.2",
     "typescript": "^4.0.2"
   },
   "dependencies": {
+    "@iktakahiro/markdown-it-katex": "^4.0.0",
+    "front-matter": "^4.0.2",
     "highlight.js": "^10.2.0",
+    "json5": "^2.1.3",
+    "katex": "^0.12.0",
     "markdown-it": "^11.0.0",
-    "serve": "^11.3.2"
+    "markdown-it-admonition": "https://github.com/jeremyong/markdown-it-admonition/tarball/21a49b25c6a42e82b1cf48c3c3bc532cb364c94e",
+    "markdown-it-emoji": "^1.4.0",
+    "markdown-it-footnote": "^3.0.2",
+    "mustache": "^4.0.1",
+    "serve-handler": "^6.1.3",
+    "yargs": "^16.0.3"
   },
   "bin": {
-    "toffee": "dist/cli.js"
+    "tuppy": "dist/cli.js"
   },
   "files": [
-    "dist/**/*"
+    "dist/**/*",
+    "views/**/*"
   ]
 }
